@@ -70,7 +70,8 @@ npm install  &>> $LOGFILE
 VALIDATE $? "Installing dependencies"
 
 # use absolute, because catalogue.service exists there
-cp /root/Roboshop-Shellscript/catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
+cp /home/ec2-user/Roboshop-Shellscript/catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
+
 VALIDATE $? "Copying catalogue service file"
 
 systemctl daemon-reload &>> $LOGFILE
@@ -85,7 +86,7 @@ systemctl start catalogue &>> $LOGFILE
 
 VALIDATE $? "Starting catalogue"
 
-cp /root/Roboshop-Shellscript/mongo.repo /etc/yum.repos.d/mongo.repo
+cp /home/ec2-user/Roboshop-Shellscript/mongo.repo /etc/yum.repos.d/mongo.repo
 VALIDATE $? "copying mongodb repo"
 
 yum install -y mongodb-enterprise mongodb-mongosh-shared-openssl11  &>> $LOGFILE
