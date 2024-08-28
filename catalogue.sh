@@ -90,7 +90,7 @@ cp /home/ec2-user/Roboshop-Shellscrpit/mongo.repo /etc/yum.repos.d/mongo.repo
 
 VALIDATE $? "copying mongodb repo"
 
-yum install -y mongodb-enterprise mongodb-mongosh-shared-openssl11  &>> $LOGFILE
+yum install  mongodb-enterprise mongodb-mongosh-shared-openssl11 -y &>> $LOGFILE
 
 VALIDATE $? "Installing MongoDB client"
 
