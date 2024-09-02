@@ -90,7 +90,7 @@ cp /home/ec2-user/Roboshop-Shellscrpit/mongo.repo /etc/yum.repos.d/mongo.repo
 
 VALIDATE $? "copying mongodb repo"
 
-yum install mongodb-org-shell -y &>> $LOGFILE
+yum install -y mongodb-mongosh &>> $LOGFILE
 
 VALIDATE $? "Installing MongoDB client"
 
