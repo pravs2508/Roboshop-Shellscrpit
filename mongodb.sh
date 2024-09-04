@@ -22,7 +22,7 @@ then
 else  
   echo "you are root user"
 fi 
-cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
+cp /home/ec2-user/Roboshop-Shellscript/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
 
 VALIDATE $? "Copied MongoDB Repo"
 
