@@ -69,7 +69,7 @@ npm install  &>> $LOGFILE
 
 VALIDATE $? "Installing dependencies"
 
-sudo cp /home/ec2-user/Roboshop-Shellscript/user.service /etc/systemd/system/user.service
+cp  -r /home/ec2-user/Roboshop-Shellscript/user.service /etc/systemd/system/
 
 VALIDATE $? "Copying user service file"
 
@@ -85,7 +85,7 @@ systemctl start user &>> $LOGFILE
 
 VALIDATE $? "Starting user"
 
-cp /home/ec2-user/Roboshop-Shellscript/mongo.repo /etc/yum.repos.d/mongo.repo
+cp -r /home/ec2-user/Roboshop-Shellscrpit/mongo.repo /etc/yum.repos.d/
 
 VALIDATE $? "copying mongodb repo"
 
